@@ -22,7 +22,7 @@ var allFeeds = [
         url: 'http://feeds.feedburner.com/udacity-linear-digressions'
     }
 ];
-
+var menuHidden=true;
 /* This function starts up our application. The Google Feed
  * Reader API is loaded asynchonously and will then call this
  * function when the API is loaded.
@@ -129,5 +129,6 @@ $(function() {
      */
     menuIcon.on('click', function() {
         $('body').toggleClass('menu-hidden');
+        menuHidden=!menuHidden;
     });
 }());
